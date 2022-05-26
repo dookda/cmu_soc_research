@@ -1,6 +1,6 @@
 geoserver.war
-postgres/
-tomcat_webapps/
+cmu_commu.sql
+
 
 # Logs
 logs
