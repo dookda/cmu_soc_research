@@ -1,0 +1,16 @@
+<layer>
+  <name>cm_waterbody</name>
+  <id>LayerInfoImpl-416ddb6b:180ff5357ca:-7fcf</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe0</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-416ddb6b:180ff5357ca:-7fd0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-26 07:55:05.576 UTC</dateCreated>
+</layer>
