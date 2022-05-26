@@ -1,5 +1,5 @@
-tomcat_webapps/
-pg_data/
+geoserver.war
+
 
 # Logs
 logs
