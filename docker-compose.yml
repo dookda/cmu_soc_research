@@ -1,13 +1,13 @@
 version: "3.3"
 services:
-  app:
+  nodejs:
     build: .
     depends_on:
       - postgres
     ports:
       - "3000:3000"
     volumes:
-      - ./:/usr/src/app/
+      - ./nodejs:/usr/src/app
 
   postgres:
     image: postgis/postgis
@@ -20,4 +20,14 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - ./cmu_commu.sql:/docker-entrypoint-initdb.d/cmu_commu.sql
+      - ./postgres/cmu_commu.sql:/docker-entrypoint-initdb.d/cmu_commu.sql
+
+  geoserver:
+    image: kartoza/geoserver
+    container_name: geoserver
+    ports:
+      - 8080:8080
+    volumes:
+      - ./geoserver_data:/opt/geoserver/data_dir
+    links:
+      - db:db

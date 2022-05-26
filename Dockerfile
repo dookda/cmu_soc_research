@@ -2,11 +2,11 @@ FROM node:17.5.0
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY nodejs/package*.json ./
 
 RUN npm install
-COPY service/ .
-COPY www/service/ .
+COPY nodejs/service/ .
+COPY nodejs/www/ .
 
-EXPOSE 4000
+EXPOSE 3000
 CMD [ "node", "server.js" ]
