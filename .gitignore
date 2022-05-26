@@ -1,4 +1,5 @@
 tomcat_webapps/
+pg_data/
 
 # Logs
 logs
