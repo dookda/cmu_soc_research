@@ -1,5 +1,6 @@
 geoserver.war
-
+postgres/
+tomcat_webapps/
 
 # Logs
 logs

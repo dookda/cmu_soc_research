@@ -5,9 +5,9 @@ services:
     depends_on:
       - postgres
     ports:
-      - "4000:4000"
-    # volumes:
-    #   - ./:/usr/src/app/
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app/
 
   postgres:
     image: postgis/postgis
@@ -16,8 +16,8 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=1234
-      - POSTGRES_DB=soc_research
+      - POSTGRES_DB=cmu_commu
     ports:
       - "5433:5432"
     volumes:
-      - ./soc_research.sql:/docker-entrypoint-initdb.d/soc_research.sql
+      - ./cmu_commu.sql:/docker-entrypoint-initdb.d/cmu_commu.sql
