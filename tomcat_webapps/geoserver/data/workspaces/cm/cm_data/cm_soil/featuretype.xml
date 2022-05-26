@@ -1,0 +1,43 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--127b0c12:180ff63c719:-7fd9</id>
+  <name>cm_soil</name>
+  <nativeName>cm_soil</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--127b0c12:180ff63c719:-7ffd</id>
+  </namespace>
+  <title>cm_soil</title>
+  <keywords>
+    <string>features</string>
+    <string>cm_soil</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>394941.125</minx>
+    <maxx>559964.4375</maxx>
+    <miny>1906486.375</miny>
+    <maxy>2227883.25</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>394941.125</minx>
+    <maxx>559964.4375</maxx>
+    <miny>1906486.375</miny>
+    <maxy>2227883.25</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--127b0c12:180ff63c719:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <internationalTitle/>
+  <internationalAbstract/>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

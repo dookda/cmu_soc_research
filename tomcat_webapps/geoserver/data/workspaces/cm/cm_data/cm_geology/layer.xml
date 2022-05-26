@@ -1,0 +1,16 @@
+<layer>
+  <name>cm_geology</name>
+  <id>LayerInfoImpl--127b0c12:180ff63c719:-7fec</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe0</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--127b0c12:180ff63c719:-7fed</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-26 10:06:51.241 UTC</dateCreated>
+</layer>

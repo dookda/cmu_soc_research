@@ -1,0 +1,16 @@
+<layer>
+  <name>tambon_bound</name>
+  <id>LayerInfoImpl--127b0c12:180ff63c719:-7fc0</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe0</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--127b0c12:180ff63c719:-7fc1</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-26 10:12:30.493 UTC</dateCreated>
+</layer>
