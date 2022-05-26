@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+  app:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "4000:4000"
+    # volumes:
+    #   - ./:/usr/src/app/
+
+  postgres:
+    image: postgis/postgis
+    container_name: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=soc_research
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./soc_research.sql:/docker-entrypoint-initdb.d/soc_research.sql
