@@ -10,9 +10,25 @@
   <gridSubsets>
     <gridSubset>
       <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>98.46860145664725</double>
+          <double>18.40978783285695</double>
+          <double>98.62023706995787</double>
+          <double>18.580607156059614</double>
+        </coords>
+      </extent>
     </gridSubset>
     <gridSubset>
       <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.0961474573279766E7</double>
+          <double>2085569.7179563057</double>
+          <double>1.0978354572539631E7</double>
+          <double>2105620.8844225733</double>
+        </coords>
+      </extent>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>
@@ -26,7 +42,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>polygon</defaultStyle>
+      <defaultStyle>cm:_planuse</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>

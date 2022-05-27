@@ -1,45 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <StyledLayerDescriptor version="1.0.0"
   xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd"
   xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc"
   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <NamedLayer>
-    <Name>_amphoe</Name>
+    <Name></Name>
     <UserStyle>
-      <Title>amphoe</Title>
+      <Title>A orange polygon style</Title>
       <FeatureTypeStyle>
         <Rule>
-          <Name>Large</Name>
-          <MaxScaleDenominator>80000</MaxScaleDenominator>
+          <Title>village bound</Title>
           <PolygonSymbolizer>
             <Stroke>
-              <CssParameter name="stroke">#262626</CssParameter>
-              <CssParameter name="stroke-width">0.6</CssParameter>
+              <CssParameter name="stroke">#f56342</CssParameter>
+              <CssParameter name="stroke-width">0.3</CssParameter>
             </Stroke>
           </PolygonSymbolizer>
-        </Rule>
-        
-        <Rule>
-          <Name>Small</Name>
-          <MinScaleDenominator>80000</MinScaleDenominator>
-          <PolygonSymbolizer>
-            <Stroke>
-              <CssParameter name="stroke">#262626</CssParameter>
-              <CssParameter name="stroke-width">0.6</CssParameter>
-            </Stroke>
-          </PolygonSymbolizer>
-		  <TextSymbolizer>
+          <TextSymbolizer>
             <Label>
-              <ogc:PropertyName>amphoe_t</ogc:PropertyName>
+              <ogc:PropertyName>vill_th</ogc:PropertyName>
             </Label>
             <Font>
-              <CssParameter name="font-family">Kanit</CssParameter>
-              <CssParameter name="font-size">14</CssParameter>
-              <CssParameter name="font-style">normal</CssParameter>
-          	</Font>
+             	<CssParameter name="font-family">Kanit</CssParameter>
+                <CssParameter name="font-size">11</CssParameter>
+                <CssParameter name="font-style">normal</CssParameter>
+            </Font>
             <Halo>
-              <Radius>2</Radius>
+              <Radius>1</Radius>
               <Fill>
                 <CssParameter name="fill">#FFFFFF</CssParameter>
               </Fill>
@@ -59,8 +47,8 @@
             <Fill>
               <CssParameter name="fill">#000000</CssParameter>
             </Fill>
-            <VendorOption name="autoWrap">90</VendorOption>
-            <VendorOption name="maxDisplacement">10</VendorOption>
+            <VendorOption name="autoWrap">60</VendorOption>
+            <VendorOption name="maxDisplacement">150</VendorOption>
           </TextSymbolizer>
         </Rule>
 

@@ -10,9 +10,25 @@
   <gridSubsets>
     <gridSubset>
       <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>97.8581815318887</double>
+          <double>16.702617675157676</double>
+          <double>99.97617471656255</double>
+          <double>20.270143387035393</double>
+        </coords>
+      </extent>
     </gridSubset>
     <gridSubset>
       <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.0893522938085578E7</double>
+          <double>1886235.2726019067</double>
+          <double>1.1129296860907095E7</double>
+          <double>2305060.729085977</double>
+        </coords>
+      </extent>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>
@@ -26,7 +42,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>polygon</defaultStyle>
+      <defaultStyle>cm:_waterbody</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>

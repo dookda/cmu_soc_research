@@ -43,28 +43,57 @@ const gter = L.tileLayer('https://{s}.google.com/vt/lyrs=t,m&x={x}&y={y}&z={z}',
     zIndex: 0
 });
 
-var pro = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_province = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     layers: 'cm:cm_province',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var amp = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_amphoe = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     layers: 'cm:cm_amphoe',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var tam = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_tambon = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     layers: 'cm:cm_tambon',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var vill = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_forest_type = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_forest_type',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+    zIndex: 0
+});
+
+var cm_waterbody = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_waterbody',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var village_bound = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:village_bound',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var planuse = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:planuse',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var cm_village = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     layers: 'cm:cm_village',
     format: 'image/png',
     transparent: true,
@@ -106,17 +135,21 @@ $("input[name='basemap']").change(async (r) => {
 })
 
 let lyr = {
-    tam: tam,
-    amp: amp,
-    pro: pro,
-    vill: vill,
+    cm_waterbody,
+    cm_forest_type,
+    cm_tambon,
+    cm_amphoe,
+    cm_province,
+    cm_village,
+    village_bound,
+    planuse,
 }
 
 // set default layer
-pro.addTo(map);
+cm_province.addTo(map);
 $("#lyr_prov").prop("checked", true);
 
-amp.addTo(map);
+cm_amphoe.addTo(map);
 $("#lyr_amp").prop("checked", true);
 
 $("input[type=checkbox]").change(async () => {
@@ -130,7 +163,7 @@ $("input[type=checkbox]").change(async () => {
     await $('input[type=checkbox]:checked').each(function () {
         chk.push($(this).val());
     });
-
+    // console.log(chk);
     chk.map(i => {
         if (lyr[`${i}`]) {
             lyr[`${i}`].addTo(map);
@@ -142,4 +175,8 @@ const legUrl = geoUrl + "/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&F
 $("#proLegend").attr("src", legUrl + "cm:cm_province&rule=Large");
 $("#ampLegend").attr("src", legUrl + "cm:cm_amphoe&rule=Large");
 $("#tamLegend").attr("src", legUrl + "cm:cm_tambon");
+$("#village_boundLegend").attr("src", legUrl + "cm:village_bound");
+$("#cm_waterbodyLegend").attr("src", legUrl + "cm:cm_waterbody");
+$("#planuseLegend").attr("src", legUrl + "cm:planuse");
 $("#villLegend").attr("src", legUrl + "cm:cm_village&rule=Large");
+$("#cm_forest_typeLegend").attr("src", legUrl + "cm:cm_forest_type");

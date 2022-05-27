@@ -9,10 +9,26 @@
   </mimeFormats>
   <gridSubsets>
     <gridSubset>
-      <gridSetName>EPSG:4326</gridSetName>
+      <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.0962106973520521E7</double>
+          <double>2085265.6758474985</double>
+          <double>1.0990653813139757E7</double>
+          <double>2107892.0261638565</double>
+        </coords>
+      </extent>
     </gridSubset>
     <gridSubset>
-      <gridSetName>EPSG:900913</gridSetName>
+      <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>98.47428240466675</double>
+          <double>18.40719633666831</double>
+          <double>98.73072302809943</double>
+          <double>18.599944643878505</double>
+        </coords>
+      </extent>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>
@@ -26,7 +42,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>polygon</defaultStyle>
+      <defaultStyle>cm:_bound_village</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>
