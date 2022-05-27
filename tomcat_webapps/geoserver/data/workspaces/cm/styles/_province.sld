@@ -1,49 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <StyledLayerDescriptor version="1.0.0"
   xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd"
   xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc"
   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <NamedLayer>
-    <Name>_amphoe</Name>
+    <Name></Name>
     <UserStyle>
-      <Title>amphoe</Title>
+      <Title>province</Title>
       <FeatureTypeStyle>
+        
         <Rule>
           <Name>Large</Name>
-          <MaxScaleDenominator>50000</MaxScaleDenominator>
+          <MaxScaleDenominator>250000</MaxScaleDenominator>
           <PolygonSymbolizer>
             <Stroke>
-              <CssParameter name="stroke">#262626</CssParameter>
-              <CssParameter name="stroke-width">0.6</CssParameter>
+              <CssParameter name="stroke">#000000</CssParameter>
+              <CssParameter name="stroke-width">1.2</CssParameter>
             </Stroke>
           </PolygonSymbolizer>
         </Rule>
         
         <Rule>
           <Name>Small</Name>
-          <MinScaleDenominator>50000</MinScaleDenominator>
+          <MinScaleDenominator>250000</MinScaleDenominator>
           <PolygonSymbolizer>
             <Stroke>
-              <CssParameter name="stroke">#262626</CssParameter>
-              <CssParameter name="stroke-width">0.6</CssParameter>
+              <CssParameter name="stroke">#000000</CssParameter>
+              <CssParameter name="stroke-width">1.2</CssParameter>
             </Stroke>
           </PolygonSymbolizer>
 		  <TextSymbolizer>
             <Label>
-              <ogc:PropertyName>amphoe_t</ogc:PropertyName>
+              <ogc:PropertyName>province_t</ogc:PropertyName>
             </Label>
             <Font>
-              <CssParameter name="font-family">Kanit</CssParameter>
-              <CssParameter name="font-size">14</CssParameter>
-              <CssParameter name="font-style">normal</CssParameter>
-          	</Font>
-            <Halo>
-              <Radius>2</Radius>
-              <Fill>
-                <CssParameter name="fill">#FFFFFF</CssParameter>
-              </Fill>
-          	</Halo>
+            <CssParameter name="font-family">Kanit</CssParameter>
+            <CssParameter name="font-size">16</CssParameter>
+            <CssParameter name="font-style">normal</CssParameter>
+            <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+              <Halo>
+                <Radius>3</Radius>
+                <Fill>
+                  <CssParameter name="fill">#FFFFFF</CssParameter>
+                </Fill>
+              </Halo>
             <LabelPlacement>
               <PointPlacement>
                 <AnchorPoint>
@@ -59,9 +61,10 @@
             <Fill>
               <CssParameter name="fill">#000000</CssParameter>
             </Fill>
-            <VendorOption name="autoWrap">90</VendorOption>
-            <VendorOption name="maxDisplacement">10</VendorOption>
+            <VendorOption name="autoWrap">60</VendorOption>
+            <VendorOption name="maxDisplacement">150</VendorOption>
           </TextSymbolizer>
+		  
         </Rule>
 
       </FeatureTypeStyle>
