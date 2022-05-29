@@ -10,9 +10,25 @@
   <gridSubsets>
     <gridSubset>
       <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>97.79149751953442</double>
+          <double>17.099558734697407</double>
+          <double>99.7126342337321</double>
+          <double>20.239028898688527</double>
+        </coords>
+      </extent>
     </gridSubset>
     <gridSubset>
       <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.0886099707786245E7</double>
+          <double>1932417.3471811528</double>
+          <double>1.1099959668554997E7</double>
+          <double>2301368.7835151367</double>
+        </coords>
+      </extent>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>
@@ -26,7 +42,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>line</defaultStyle>
+      <defaultStyle>cm:_road</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>

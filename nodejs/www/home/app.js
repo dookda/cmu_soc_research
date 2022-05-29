@@ -72,6 +72,69 @@ var cm_forest_type = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     zIndex: 0
 });
 
+var cm_forest_use = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_forest_use',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+    zIndex: 0
+});
+
+var cm_agriculture_zoning = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_agriculture_zoning',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+    zIndex: 0
+});
+
+var cm_geology = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_geology',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+    zIndex: 0
+});
+
+
+var cm_soil = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_soil',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+    zIndex: 0
+});
+
+var cm_landuse_2543 = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_landuse_2543',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+    zIndex: 0
+});
+
+var cm_landuse_2538 = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_landuse_2538',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+    zIndex: 0
+});
+
+var cm_fault = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_fault',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var cm_contour = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_contour',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
 var cm_waterbody = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     layers: 'cm:cm_waterbody',
     format: 'image/png',
@@ -93,6 +156,20 @@ var planuse = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     name: "lyr",
 });
 
+var cm_river = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_river',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var cm_road = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+    layers: 'cm:cm_road',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
 var cm_village = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     layers: 'cm:cm_village',
     format: 'image/png',
@@ -100,20 +177,6 @@ var cm_village = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     name: "lyr",
     // CQL_FILTER: 'pro_code=53'
 });
-
-// var baseMap = {
-//     "OSM": osm,
-//     "แผนที่ถนน": grod.addTo(map),
-//     "แผนที่ภาพถ่าย": ghyb
-// }
-
-// var overlayMap = {
-//     "ขอบตำบล": tam.addTo(map),
-//     "ขอบอำเภอ": amp.addTo(map),
-//     "ขอบเขตจังหวัด": pro.addTo(map),
-// }
-
-// L.control.layers(baseMap, overlayMap).addTo(map);
 
 let base = {
     mapbox: mapbox.addTo(map),
@@ -143,6 +206,16 @@ let lyr = {
     cm_village,
     village_bound,
     planuse,
+    cm_forest_use,
+    cm_geology,
+    cm_fault,
+    cm_contour,
+    cm_agriculture_zoning,
+    cm_river,
+    cm_road,
+    cm_soil,
+    cm_landuse_2543,
+    cm_landuse_2538
 }
 
 // set default layer
@@ -180,3 +253,13 @@ $("#cm_waterbodyLegend").attr("src", legUrl + "cm:cm_waterbody");
 $("#planuseLegend").attr("src", legUrl + "cm:planuse");
 $("#villLegend").attr("src", legUrl + "cm:cm_village&rule=Large");
 $("#cm_forest_typeLegend").attr("src", legUrl + "cm:cm_forest_type");
+$("#cm_forest_useLegend").attr("src", legUrl + "cm:cm_forest_use");
+$("#cm_geologyLegend").attr("src", legUrl + "cm:cm_geology");
+$("#cm_faultLegend").attr("src", legUrl + "cm:cm_fault");
+$("#cm_contourLegend").attr("src", legUrl + "cm:cm_contour");
+$("#cm_agriculture_zoningLegend").attr("src", legUrl + "cm:cm_agriculture_zoning");
+$("#cm_riverLegend").attr("src", legUrl + "cm:cm_river");
+$("#cm_roadLegend").attr("src", legUrl + "cm:cm_road");
+$("#cm_soilLegend").attr("src", legUrl + "cm:cm_soil");
+$("#cm_landuse_2543Legend").attr("src", legUrl + "cm:cm_landuse_2543");
+$("#cm_landuse_2538Legend").attr("src", legUrl + "cm:cm_landuse_2538");
