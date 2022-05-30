@@ -189,7 +189,7 @@ let saveData = () => {
     }
     console.log(obj);
 
-    axios.post('/api/survey_insert', obj).then((res) => {
+    axios.post('/3000/api/survey_insert', obj).then((res) => {
 
         document.getElementById('progress').innerHTML = "กำลังอัพโหลดไฟล์...."
         modal.show();
