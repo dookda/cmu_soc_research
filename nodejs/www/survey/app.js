@@ -165,8 +165,11 @@ let resizeImage = (file) => {
     img.src = URL.createObjectURL(file);
 }
 
+const modal = new bootstrap.Modal(document.getElementById('modal'), {
+    keyboard: false,
+})
+
 let saveData = () => {
-    $("#status").empty().text("File is uploading...");
 
     if (!dataurl) {
         dataurl = '-';
@@ -187,11 +190,19 @@ let saveData = () => {
     console.log(obj);
 
     axios.post('/api/survey_insert', obj).then((res) => {
-        // editData()
-        $("#ex5").modal({
-            escapeClose: false,
-            clickClose: false,
-            showClose: false
-        });
+
+        document.getElementById('progress').innerHTML = "กำลังอัพโหลดไฟล์...."
+        modal.show();
+        if (res.data.data == "success") {
+            document.getElementById('progress').innerHTML = "เพิ่มข้อมูลสำเร็จ"
+            setTimeout(() => {
+                modal.hide()
+                document.getElementById('placename').value = "";
+                document.getElementById('placedetail').value = "";
+                document.getElementById('preview').src = "";
+                document.getElementById('imgfile').value = "";
+            }, 2000);
+        }
     })
 };
+

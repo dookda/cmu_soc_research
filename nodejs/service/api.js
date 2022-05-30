@@ -6,6 +6,7 @@ const db = con.db;
 app.get("/api/getdata", (req, res) => {
 
     const sql = `SELECT * FROM survey ORDER BY ts DESC`;
+    console.log(sql);
     db.query(sql).then(r => {
         res.status(200).json({
             data: r.rows

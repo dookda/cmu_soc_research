@@ -1,6 +1,7 @@
 version: "3.3"
 services:
   nodejs:
+    container_name: nodejs
     build: .
     depends_on:
       - postgres
@@ -21,6 +22,7 @@ services:
       - "5433:5432"
     volumes:
       - ./postgres/cmu_commu.sql:/docker-entrypoint-initdb.d/cmu_commu.sql
+      - ./postgres/fonts/truetype/:/usr/share/fonts/truetype/
 
   geoserver:
     container_name: geoserver
