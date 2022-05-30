@@ -3,14 +3,37 @@ const app = express.Router();
 const con = require("./db");
 const db = con.db;
 
-app.get("/alcohol-api/getdata", (req, res) => {
+app.get("/api/getdata", (req, res) => {
 
-    const sql = `SELECT * FROM ud_alcohol_data ORDER BY ts DESC`;
+    const sql = `SELECT * FROM survey ORDER BY ts DESC`;
     db.query(sql).then(r => {
         res.status(200).json({
             data: r.rows
         })
     })
 });
+
+app.post("/api/survey_insert", async (req, res) => {
+    const { data } = req.body;
+    let pid = Date.now()
+    await db.query(`INSERT INTO survey(pid, ts)VALUES('${pid}', now())`)
+    let d;
+    for (d in data) {
+        // console.log(d, data[d]);
+        if (data[d] !== '' && d !== 'geom') {
+            let sql = `UPDATE survey SET ${d}='${data[d]}' WHERE pid='${pid}'`;
+            await db.query(sql)
+        }
+    }
+
+    if (data.geom !== "") {
+        let sql = `UPDATE survey SET geom = ST_GeomfromGeoJSON('${JSON.stringify(data.geom.geometry)}') 
+            WHERE pid='${pid}'`;
+        await db.query(sql)
+    }
+    res.status(200).json({
+        data: "success"
+    })
+})
 
 module.exports = app;
