@@ -22,7 +22,6 @@ services:
       - "5433:5432"
     volumes:
       - ./postgres/cmu_commu.sql:/docker-entrypoint-initdb.d/cmu_commu.sql
-      - ./postgres/fonts/truetype/:/usr/share/fonts/truetype/
 
   geoserver:
     container_name: geoserver
@@ -31,5 +30,6 @@ services:
     image: tomcat:8.5.79-jre8
     volumes:
       - ./tomcat_webapps/:/usr/local/tomcat/webapps/
+      - ./tomcat_webapps/fonts/truetype/:/usr/share/fonts/truetype/
     ports:
       - '8080:8080'
