@@ -1,6 +1,6 @@
 geoserver.war
 cmu_commu.sql
-db.js
+#db.js
 
 # Logs
 logs
