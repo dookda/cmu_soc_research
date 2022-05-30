@@ -12,3 +12,4 @@ RUN npm i -g nodemon
 EXPOSE 3000
 # CMD [ "node", "server.js" ]
 CMD [ "nodemon", "server.js" ]
+

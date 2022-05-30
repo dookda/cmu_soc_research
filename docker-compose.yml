@@ -1,14 +1,27 @@
 version: "3.3"
 services:
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    depends_on:
+      - nodejs
+      - geoserver
+    ports:
+      - "80:80"
+    # environment:
+    #   - NGINX_HOST=localhost
+    #   - NGINX_PORT=80
+
   nodejs:
     container_name: nodejs
-    build: .
+    build: ./nodejs
     depends_on:
       - postgres
     ports:
       - "3000:3000"
     volumes:
       - ./nodejs:/usr/src/app
+    restart: always
 
   postgres:
     image: postgis/postgis
