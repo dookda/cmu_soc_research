@@ -2,15 +2,16 @@ FROM node
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package.json .
 
 RUN npm install
-RUN npm install -g npm
-RUN npm i -g nodemon
+# RUN npm install -g npm
+# RUN npm i -g nodemon
 # COPY nodejs/service/ .
 # COPY nodejs/www/ .
+COPY . .
 
 EXPOSE 3000
-# CMD [ "node", "server.js" ]
-CMD [ "nodemon", "server.js" ]
+CMD [ "node", "server.js" ]
+# CMD [ "nodemon", "server.js" ]
 

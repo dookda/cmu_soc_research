@@ -20,3 +20,8 @@ docker-compose up --no-cache
 docker-compose up -d --no-cache
 docker-compose up --force-recreate
 ```
+
+remove all container
+```
+docker ps -aq | xargs docker stop | xargs docker rm
+```
