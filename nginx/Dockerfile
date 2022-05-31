@@ -6,6 +6,7 @@ WORKDIR /usr/share/nginx/html
 # RUN rm -rf ./*
 # Copy static assets from builder stage
 # COPY .  /usr/share/nginx/html/
+# COPY ./html/index.html .
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 # RUN nginx -s reload -c /etc/nginx/conf.d/default.conf 

@@ -8,6 +8,8 @@ services:
       - geoserver
     ports:
       - "80:80"
+    volumes:
+      - ./nginx/html:/usr/share/nginx/html
     # environment:
     #   - NGINX_HOST=localhost
     #   - NGINX_PORT=80
