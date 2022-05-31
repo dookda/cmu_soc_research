@@ -13,15 +13,20 @@ services:
     #   - NGINX_PORT=80
 
   nodejs:
+    image: "node"
     container_name: nodejs
-    build: ./nodejs
+    working_dir: /home/node/app
+    restart: always
     depends_on:
       - postgres
-    ports:
-      - "3000:3000"
+      - geoserver
+    environment:
+      - NODE_ENV=production
     volumes:
-      - ./nodejs:/usr/src/app
-    restart: always
+      - ./nodejs:/home/node/app
+    expose:
+      - "3000"
+    command: bash -c "npm i && npm i -g nodemon && nodemon server.js"
 
   postgres:
     image: postgis/postgis
