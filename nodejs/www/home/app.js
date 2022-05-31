@@ -1,8 +1,9 @@
-const geoUrl = "http://localhost/8080"
+const geoUrl = "/8080"
 
 let map = L.map('map', {
-    center: [18.80, 98.60],
-    zoom: 8,
+    // center: [18.80, 98.60],
+    center: [18.560018266865583, 98.63156318664552],
+    zoom: 13,
     scrollWheelZoom: true
 });
 
@@ -225,6 +226,15 @@ $("#lyr_prov").prop("checked", true);
 cm_amphoe.addTo(map);
 $("#lyr_amp").prop("checked", true);
 
+cm_road.addTo(map);
+$("#lyr_cm_road").prop("checked", true);
+
+village_bound.addTo(map);
+$("#lyr_village_bound").prop("checked", true);
+
+cm_village.addTo(map);
+$("#lyr_cm_village").prop("checked", true);
+
 $("input[type=checkbox]").change(async () => {
     await map.eachLayer(i => {
         if (i.options.name == "lyr") {
@@ -263,3 +273,8 @@ $("#cm_roadLegend").attr("src", legUrl + "cm:cm_road");
 $("#cm_soilLegend").attr("src", legUrl + "cm:cm_soil");
 $("#cm_landuse_2543Legend").attr("src", legUrl + "cm:cm_landuse_2543");
 $("#cm_landuse_2538Legend").attr("src", legUrl + "cm:cm_landuse_2538");
+
+
+map.on("click", (e) => {
+    console.log(e);
+})
