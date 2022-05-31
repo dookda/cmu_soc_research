@@ -18,4 +18,5 @@ start docker compose
 ```
 docker-compose up --no-cache
 docker-compose up -d --no-cache
+docker-compose up --force-recreate
 ```
