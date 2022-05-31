@@ -1,4 +1,4 @@
-const geoUrl = "http://localhost:8080"
+const geoUrl = "http://localhost/3000"
 
 let map = L.map('map', {
     center: [18.80, 98.60],
