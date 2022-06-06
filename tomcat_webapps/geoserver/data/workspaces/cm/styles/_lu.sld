@@ -45,7 +45,7 @@
         <se:Rule>
           <se:Name>U</se:Name>
           <se:Description>
-            <se:Title>เมืองและสิ่งปลูกสรา้ง</se:Title>
+            <se:Title>เมืองและสิ่งปลูกสร้าง</se:Title>
           </se:Description>
           <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
             <ogc:PropertyIsEqualTo>

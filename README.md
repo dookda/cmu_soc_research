@@ -60,3 +60,12 @@ nodejs:
       - "3000"
     command: bash -c "npm i && npm i -g nodemon && nodemon server.js"
 ```
+
+start
+```
+http://localhost/3000/home/
+```
+geoserver
+```
+http://localhost/8080/geoserver/
+```

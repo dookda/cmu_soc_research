@@ -254,7 +254,7 @@ $("input[type=checkbox]").change(async () => {
     })
 })
 
-const legUrl = geoUrl + "/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit&LAYER=";
+const legUrl = geoUrl + "/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit;fontAntiAliasing:true;dpi:96&LAYER=";
 $("#proLegend").attr("src", legUrl + "cm:cm_province&rule=Large");
 $("#ampLegend").attr("src", legUrl + "cm:cm_amphoe&rule=Large");
 $("#tamLegend").attr("src", legUrl + "cm:cm_tambon");
