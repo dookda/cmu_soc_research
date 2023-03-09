@@ -1,4 +1,4 @@
-const geoUrl = "/8080"
+const geoUrl = "/geoserver";
 
 let map = L.map('map', {
     // center: [18.80, 98.60],

@@ -1,4 +1,4 @@
-const geoUrl = "/8080"
+const geoUrl = "/geoserver";
 
 let map = L.map('map', {
     center: [18.80, 98.60],
@@ -189,7 +189,7 @@ let saveData = () => {
     }
     console.log(obj);
 
-    axios.post('/3000/api/survey_insert', obj).then((res) => {
+    axios.post('/api/survey_insert', obj).then((res) => {
 
         document.getElementById('progress').innerHTML = "กำลังอัพโหลดไฟล์...."
         modal.show();
