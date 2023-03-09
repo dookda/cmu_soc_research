@@ -1,5 +1,3 @@
-const geoUrl = "/geoserver";
-
 let map = L.map('map', {
     // center: [18.80, 98.60],
     center: [18.560018266865583, 98.63156318664552],
@@ -44,28 +42,28 @@ const gter = L.tileLayer('https://{s}.google.com/vt/lyrs=t,m&x={x}&y={y}&z={z}',
     zIndex: 0
 });
 
-var cm_province = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_province = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_province',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_amphoe = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_amphoe = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_amphoe',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_tambon = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_tambon = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_tambon',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_forest_type = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_forest_type = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_forest_type',
     format: 'image/png',
     transparent: true,
@@ -73,7 +71,7 @@ var cm_forest_type = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     zIndex: 0
 });
 
-var cm_forest_use = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_forest_use = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_forest_use',
     format: 'image/png',
     transparent: true,
@@ -81,7 +79,7 @@ var cm_forest_use = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     zIndex: 0
 });
 
-var cm_agriculture_zoning = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_agriculture_zoning = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_agriculture_zoning',
     format: 'image/png',
     transparent: true,
@@ -89,7 +87,7 @@ var cm_agriculture_zoning = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     zIndex: 0
 });
 
-var cm_geology = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_geology = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_geology',
     format: 'image/png',
     transparent: true,
@@ -98,7 +96,7 @@ var cm_geology = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
 });
 
 
-var cm_soil = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_soil = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_soil',
     format: 'image/png',
     transparent: true,
@@ -106,7 +104,7 @@ var cm_soil = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     zIndex: 0
 });
 
-var cm_landuse_2543 = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_landuse_2543 = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_landuse_2543',
     format: 'image/png',
     transparent: true,
@@ -114,7 +112,7 @@ var cm_landuse_2543 = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     zIndex: 0
 });
 
-var cm_landuse_2538 = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_landuse_2538 = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_landuse_2538',
     format: 'image/png',
     transparent: true,
@@ -122,56 +120,56 @@ var cm_landuse_2538 = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
     zIndex: 0
 });
 
-var cm_fault = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_fault = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_fault',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_contour = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_contour = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_contour',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_waterbody = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_waterbody = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_waterbody',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var village_bound = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var village_bound = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:village_bound',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var planuse = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var planuse = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:planuse',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_river = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_river = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_river',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_road = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_road',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_village = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_village = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_village',
     format: 'image/png',
     transparent: true,
@@ -254,7 +252,7 @@ $("input[type=checkbox]").change(async () => {
     })
 })
 
-const legUrl = geoUrl + "/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit;fontAntiAliasing:true;dpi:96&LAYER=";
+const legUrl = "/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&legend_options=fontName:Kanit;fontAntiAliasing:true;dpi:96&LAYER=";
 $("#proLegend").attr("src", legUrl + "cm:cm_province&rule=Large");
 $("#ampLegend").attr("src", legUrl + "cm:cm_amphoe&rule=Large");
 $("#tamLegend").attr("src", legUrl + "cm:cm_tambon");
@@ -273,7 +271,6 @@ $("#cm_roadLegend").attr("src", legUrl + "cm:cm_road");
 $("#cm_soilLegend").attr("src", legUrl + "cm:cm_soil");
 $("#cm_landuse_2543Legend").attr("src", legUrl + "cm:cm_landuse_2543");
 $("#cm_landuse_2538Legend").attr("src", legUrl + "cm:cm_landuse_2538");
-
 
 map.on("click", (e) => {
     console.log(e);

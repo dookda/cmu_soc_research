@@ -1,5 +1,3 @@
-const geoUrl = "/geoserver";
-
 let map = L.map('map', {
     center: [18.80, 98.60],
     zoom: 8,
@@ -43,21 +41,21 @@ const gter = L.tileLayer('https://{s}.google.com/vt/lyrs=t,m&x={x}&y={y}&z={z}',
     zIndex: 0
 });
 
-var cm_province = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_province = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_province',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_amphoe = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_amphoe = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_amphoe',
     format: 'image/png',
     transparent: true,
     name: "lyr",
 });
 
-var cm_tambon = L.tileLayer.wms(geoUrl + "/geoserver/cm/wms?", {
+var cm_tambon = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_tambon',
     format: 'image/png',
     transparent: true,

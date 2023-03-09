@@ -1,63 +1,50 @@
 version: "3.3"
 services:
-  # nginx:
-  #   container_name: nginx
-  #   build: ./nginx
-  #   depends_on:
-  #     - nodejs
-  #     - geoserver
-  #   ports:
-  #     - 80:80
-  #   volumes:
-  #     - ./nginx/html:/usr/share/nginx/html
-  # environment:
-  #   - NGINX_HOST=localhost
-  #   - NGINX_PORT=80
   nginx:
-    image: nginx:latest
-    ports:
-      - 80:80
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    image: nginx
+    # build: ./nginx
     depends_on:
       - nodejs
       - tomcat
+    ports:
+      - "80:80"
+    volumes:
+      # - ./nginx/html:/usr/share/nginx/html
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
   nodejs:
     image: "node"
-    container_name: nodejs
     working_dir: /home/node/app
     restart: always
     depends_on:
       - postgres
+      - tomcat
     environment:
       - NODE_ENV=production
     volumes:
       - ./nodejs:/home/node/app
-    # ports:
-    #   - 3000:3000
+    ports:
+      - '3000:3000'
     command: bash -c "npm i && npm i -g nodemon && nodemon server.js"
 
   postgres:
     image: postgis/postgis
-    container_name: postgres
     restart: always
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=1234
       - POSTGRES_DB=cmu_commu
     ports:
-      - 5433:5432
+      - "5433:5432"
     volumes:
       - ./postgres/cmu_commu.sql:/docker-entrypoint-initdb.d/cmu_commu.sql
 
   tomcat:
-    container_name: tomcat
     depends_on:
       - postgres
-    image: tomcat:8.5.79-jre8
+    image: tomcat:8-jre11
     volumes:
-      - ./tomcat_webapps/:/usr/local/tomcat/webapps/
-      - ./tomcat_webapps/setenv.sh:/usr/local/tomcat/bin/setenv.sh
-      - ./tomcat_webapps/fonts/truetype/:/usr/share/fonts/truetype/
-    # ports:
-    #   - 8080:8080
+      - ./tomcat/:/usr/local/tomcat/webapps/
+      - ./tomcat/fonts/truetype/:/usr/share/fonts/truetype/
+    ports:
+      - '8080:8080'
