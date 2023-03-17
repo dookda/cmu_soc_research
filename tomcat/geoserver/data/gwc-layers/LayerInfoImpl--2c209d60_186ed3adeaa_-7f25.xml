@@ -1,8 +1,8 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl--2c209d60:186ed3adeaa:-7fd7</id>
+  <id>LayerInfoImpl--2c209d60:186ed3adeaa:-7f25</id>
   <enabled>true</enabled>
   <inMemoryCached>true</inMemoryCached>
-  <name>cm:mk_plot_MK</name>
+  <name>cm:mk_servicearea</name>
   <mimeFormats>
     <string>image/png</string>
     <string>image/jpeg</string>
@@ -12,10 +12,10 @@
       <gridSetName>EPSG:4326</gridSetName>
       <extent>
         <coords>
-          <double>98.81761932373047</double>
-          <double>18.853479385375977</double>
-          <double>98.83638763427734</double>
-          <double>18.870561599731445</double>
+          <double>98.81536865234375</double>
+          <double>18.852449417114258</double>
+          <double>98.84419250488281</double>
+          <double>18.870630264282227</double>
         </coords>
       </extent>
     </gridSubset>
@@ -23,10 +23,10 @@
       <gridSetName>EPSG:900913</gridSetName>
       <extent>
         <coords>
-          <double>1.1000327064521225E7</double>
-          <double>2137693.0585699864</double>
-          <double>1.1002416343294354E7</double>
-          <double>2139702.55205312</double>
+          <double>1.1000076520928513E7</double>
+          <double>2137571.903154909</double>
+          <double>1.1003285177515863E7</double>
+          <double>2139710.629929972</double>
         </coords>
       </extent>
     </gridSubset>
@@ -42,7 +42,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>_plot_agri</defaultStyle>
+      <defaultStyle>_servicearea</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>

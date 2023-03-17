@@ -10,9 +10,25 @@
   <gridSubsets>
     <gridSubset>
       <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>98.81903076171875</double>
+          <double>18.852802276611328</double>
+          <double>98.84032440185547</double>
+          <double>18.864852905273438</double>
+        </coords>
+      </extent>
     </gridSubset>
     <gridSubset>
       <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.1000484185079368E7</double>
+          <double>2137613.4100189195</double>
+          <double>1.1002854582256522E7</double>
+          <double>2139030.977918939</double>
+        </coords>
+      </extent>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>
@@ -26,7 +42,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>point</defaultStyle>
+      <defaultStyle>_pour_point</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>

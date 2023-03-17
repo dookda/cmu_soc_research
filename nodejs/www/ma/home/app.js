@@ -334,6 +334,7 @@ $("#ma_trailLegend").attr("src", legUrl + "cm:ma_trail");
 $("#ma_irrigation_lineLegend").attr("src", legUrl + "cm:ma_irrigation_line");
 $("#ma_plot_greenhouseLegend").attr("src", legUrl + "cm:ma_plot_greenhouse");
 $("#ma_boundaryLegend").attr("src", legUrl + "cm:ma_boundary");
+$("#ma_serviceareaLegend").attr("src", legUrl + "cm:ma_servicearea");
 
 map.on("click", (e) => {
     console.log(e);

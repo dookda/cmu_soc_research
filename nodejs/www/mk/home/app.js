@@ -1,6 +1,6 @@
 let map = L.map('map', {
     // center: [18.80, 98.60],
-    center: [19.1569935146907, 99.00922118363802],
+    center: [18.87299114104469, 98.82399559020998],
     zoom: 13,
     scrollWheelZoom: true
 });
@@ -169,6 +169,70 @@ var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     name: "lyr",
 });
 
+var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:cm_road',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var mk_pipe = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_pipe',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var mk_plot_MK = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_plot_MK',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var mk_pour_point = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_pour_point',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var mk_road = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_road',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_servicearea',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var mk_travel = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_travel',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var mk_stream = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_stream',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_servicearea',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+
 var cm_village = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:cm_village',
     format: 'image/png',
@@ -214,7 +278,16 @@ let lyr = {
     cm_road,
     cm_soil,
     cm_landuse_2543,
-    cm_landuse_2538
+    cm_landuse_2538,
+
+    mk_pipe,
+    mk_plot_MK,
+    mk_pour_point,
+    mk_road,
+    mk_servicearea,
+    mk_travel,
+    mk_stream,
+    mk_servicearea
 }
 
 // set default layer
@@ -271,6 +344,16 @@ $("#cm_roadLegend").attr("src", legUrl + "cm:cm_road");
 $("#cm_soilLegend").attr("src", legUrl + "cm:cm_soil");
 $("#cm_landuse_2543Legend").attr("src", legUrl + "cm:cm_landuse_2543");
 $("#cm_landuse_2538Legend").attr("src", legUrl + "cm:cm_landuse_2538");
+
+$("#mk_pipeLegend").attr("src", legUrl + "cm:mk_pipe");
+$("#mk_plot_MKLegend").attr("src", legUrl + "cm:mk_plot_MK");
+$("#mk_pour_pointLegend").attr("src", legUrl + "cm:mk_pour_point");
+$("#mk_roadLegend").attr("src", legUrl + "cm:mk_road");
+$("#mk_serviceareaLegend").attr("src", legUrl + "cm:mk_servicearea");
+$("#mk_travelLegend").attr("src", legUrl + "cm:mk_travel");
+$("#mk_streamLegend").attr("src", legUrl + "cm:mk_stream");
+$("#mk_serviceareaLegend").attr("src", legUrl + "cm:mk_servicearea");
+
 
 map.on("click", (e) => {
     console.log(e);

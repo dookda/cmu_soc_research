@@ -4,15 +4,31 @@
   <inMemoryCached>true</inMemoryCached>
   <name>cm:ma_servicearea</name>
   <mimeFormats>
-    <string>image/jpeg</string>
     <string>image/png</string>
+    <string>image/jpeg</string>
   </mimeFormats>
   <gridSubsets>
     <gridSubset>
-      <gridSetName>EPSG:4326</gridSetName>
+      <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.0977356888221215E7</double>
+          <double>2102201.7220028276</double>
+          <double>1.0981597444690416E7</double>
+          <double>2106571.9328532945</double>
+        </coords>
+      </extent>
     </gridSubset>
     <gridSubset>
-      <gridSetName>EPSG:900913</gridSetName>
+      <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>98.61127471923828</double>
+          <double>18.551490783691406</double>
+          <double>98.64936828613281</double>
+          <double>18.58870506286621</double>
+        </coords>
+      </extent>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>
@@ -24,9 +40,12 @@
   <parameterFilters>
     <styleParameterFilter>
       <key>STYLES</key>
-      <defaultValue></defaultValue>
+      <defaultValue>servicearea</defaultValue>
+      <allowedStyles class="sorted-set">
+        <string>_servicearea</string>
+      </allowedStyles>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>polygon</defaultStyle>
+      <defaultStyle>servicearea</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>
