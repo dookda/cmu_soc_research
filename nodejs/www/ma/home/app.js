@@ -177,6 +177,55 @@ var cm_village = L.tileLayer.wms("/geoserver/cm/wms?", {
     // CQL_FILTER: 'pro_code=53'
 });
 
+var ma_boundary = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:ma_boundary',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var ma_irrigation_line = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:ma_irrigation_line',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var ma_plot_greenhouse = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:ma_plot_greenhouse',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var ma_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:ma_servicearea',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var ma_tank_point = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:ma_tank_point',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var ma_trail = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:ma_trail',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
+var ma_tree = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:ma_tree',
+    format: 'image/png',
+    transparent: true,
+    name: "lyr",
+});
+
 let base = {
     mapbox: mapbox.addTo(map),
     ghyb: ghyb,
@@ -214,7 +263,14 @@ let lyr = {
     cm_road,
     cm_soil,
     cm_landuse_2543,
-    cm_landuse_2538
+    cm_landuse_2538,
+    ma_boundary,
+    ma_irrigation_line,
+    ma_plot_greenhouse,
+    ma_servicearea,
+    ma_tank_point,
+    ma_trail,
+    ma_tree
 }
 
 // set default layer
@@ -271,6 +327,13 @@ $("#cm_roadLegend").attr("src", legUrl + "cm:cm_road");
 $("#cm_soilLegend").attr("src", legUrl + "cm:cm_soil");
 $("#cm_landuse_2543Legend").attr("src", legUrl + "cm:cm_landuse_2543");
 $("#cm_landuse_2538Legend").attr("src", legUrl + "cm:cm_landuse_2538");
+
+$("#ma_tank_pointLegend").attr("src", legUrl + "cm:ma_tank_point");
+$("#ma_treeLegend").attr("src", legUrl + "cm:ma_tree");
+$("#ma_trailLegend").attr("src", legUrl + "cm:ma_trail");
+$("#ma_irrigation_lineLegend").attr("src", legUrl + "cm:ma_irrigation_line");
+$("#ma_plot_greenhouseLegend").attr("src", legUrl + "cm:ma_plot_greenhouse");
+$("#ma_boundaryLegend").attr("src", legUrl + "cm:ma_boundary");
 
 map.on("click", (e) => {
     console.log(e);

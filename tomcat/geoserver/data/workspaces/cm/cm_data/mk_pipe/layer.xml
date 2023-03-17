@@ -1,0 +1,16 @@
+<layer>
+  <name>mk_pipe</name>
+  <id>LayerInfoImpl--2c209d60:186ed3adeaa:-7fdd</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe3</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--2c209d60:186ed3adeaa:-7fde</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-03-17 03:21:25.308 UTC</dateCreated>
+</layer>

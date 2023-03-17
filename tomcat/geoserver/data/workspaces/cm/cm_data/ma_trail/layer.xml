@@ -1,0 +1,17 @@
+<layer>
+  <name>ma_trail</name>
+  <id>LayerInfoImpl--2c209d60:186ed3adeaa:-7fe3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--2c209d60:186ed3adeaa:-7f8a</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--2c209d60:186ed3adeaa:-7fe4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-03-17 03:20:32.380 UTC</dateCreated>
+  <dateModified>2023-03-17 05:53:12.523 UTC</dateModified>
+</layer>

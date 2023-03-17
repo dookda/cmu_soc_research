@@ -1,0 +1,16 @@
+<layer>
+  <name>mk_plot_MK</name>
+  <id>LayerInfoImpl--2c209d60:186ed3adeaa:-7fd7</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe0</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--2c209d60:186ed3adeaa:-7fd8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-03-17 03:24:01.824 UTC</dateCreated>
+</layer>
