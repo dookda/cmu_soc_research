@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฐานข้อมูล</title>
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="./../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">บ้านเมืองอาง</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../../index.html">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">ฐานข้อมูล</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../survey/index.html">สำรวจ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../aboutus/index.html">ข้อมูลชุมชน</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded" id="map"></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                    <div class="scroll">
+
+                        <label><b>ชั้นข้อมูล</b></label>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_village" id="lyr_cm_village">
+                                <label class="form-check-label">
+                                    ตำแหน่งหมู่บ้าน
+                                </label>
+                                <br>
+                                <img id="villLegend">
+                            </div>
+                        </div>
+
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ma_tank_point"
+                                    id="lyr_ma_tank_point">
+                                <label class="form-check-label">
+                                    จุดเก็บน้ำ
+                                </label>
+                                <br>
+                                <img id="ma_tank_pointLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ma_tree" id="lyr_ma_tree">
+                                <label class="form-check-label">
+                                    ต้นไม้
+                                </label>
+                                <br>
+                                <img id="ma_treeLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ma_trail" id="lyr_ma_trail">
+                                <label class="form-check-label">
+                                    ทางเดิน
+                                </label>
+                                <br>
+                                <img id="ma_trailLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ma_irrigation_line"
+                                    id="lyr_ma_irrigation_line">
+                                <label class="form-check-label">
+                                    แหล่งน้ำชลประทาน
+                                </label>
+                                <br>
+                                <img id="ma_irrigation_lineLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ma_servicearea"
+                                    id="lyr_ma_servicearea">
+                                <label class="form-check-label">
+                                    พื้นที่บริการ
+                                </label>
+                                <br>
+                                <img id="ma_serviceareaLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ma_plot_greenhouse"
+                                    id="lyr_ma_plot_greenhouse">
+                                <label class="form-check-label">
+                                    โรงเรือนเกษตรกรรม
+                                </label>
+                                <br>
+                                <img id="ma_plot_greenhouseLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ma_boundary"
+                                    id="lyr_ma_boundary">
+                                <label class="form-check-label">
+                                    ขอบเมืองอาง
+                                </label>
+                                <br>
+                                <img id="ma_boundaryLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_road" id="lyr_cm_road">
+                                <label class="form-check-label">
+                                    เส้นทางนาคม
+                                </label>
+                                <br>
+                                <img id="cm_roadLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_river" id="lyr_cm_river">
+                                <label class="form-check-label">
+                                    เส้นลำน้ำ
+                                </label>
+                                <br>
+                                <img id="cm_riverLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_fault" id="lyr_cm_fault">
+                                <label class="form-check-label">
+                                    รอยเลื่อน
+                                </label>
+                                <br>
+                                <img id="cm_faultLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_contour" id="lyr_cm_contour">
+                                <label class="form-check-label">
+                                    เส้นชั้นความสูง
+                                </label>
+                                <br>
+                                <img id="cm_contourLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_waterbody"
+                                    id="lyr_cm_waterbody">
+                                <label class="form-check-label">
+                                    แหล่งน้ำผิวดิน
+                                </label>
+                                <br>
+                                <img id="cm_waterbodyLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="planuse" id="lyr_planuse">
+                                <label class="form-check-label">
+                                    แปลงที่ดิน
+                                </label>
+                                <br>
+                                <img id="planuseLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_province" id="lyr_prov">
+                                <label class="form-check-label">
+                                    ขอบเขตจังหวัด
+                                </label>
+                                <br>
+                                <img id="proLegend">
+                            </div>
+                        </div>
+
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_amphoe" id="lyr_amp">
+                                <label class="form-check-label">
+                                    ขอบเขตอำเภอ
+                                </label>
+                                <br>
+                                <img id="ampLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_tambon" id="lyr_tam">
+                                <label class="form-check-label">
+                                    ขอบเขตตำบล
+                                </label>
+                                <br>
+                                <img id="tamLegend">
+                            </div>
+                        </div>
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="village_bound"
+                                    id="lyr_village_bound">
+                                <label class="form-check-label">
+                                    ขอบเขตหมู่บ้าน
+                                </label>
+                                <br>
+                                <img id="village_boundLegend">
+                            </div>
+                        </div>
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_geology" id="lyr_cm_geology">
+                                <label class="form-check-label">
+                                    ลักษณะทางธรณีวิทยา
+                                </label>
+                                <br>
+                                <img id="cm_geologyLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_forest_type"
+                                    id="lyr_cm_forest_type">
+                                <label class="form-check-label">
+                                    ประเภทป่าไม้
+                                </label>
+                                <br>
+                                <img id="cm_forest_typeLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_forest_use"
+                                    id="lyr_cm_forest_use">
+                                <label class="form-check-label">
+                                    การใช้ประโยชน์ป่าไม้
+                                </label>
+                                <br>
+                                <img id="cm_forest_useLegend">
+                            </div>
+                        </div>
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_agriculture_zoning"
+                                    id="lyr_cm_agriculture_zoning">
+                                <label class="form-check-label">
+                                    พื้นที่ส่งเสริมการเกษตร
+                                </label>
+                                <br>
+                                <img id="cm_agriculture_zoningLegend">
+                            </div>
+                        </div>
+
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_landuse_2543"
+                                    id="lyr_cm_landuse_2543">
+                                <label class="form-check-label">
+                                    การใช้ประโยชน์ที่ดินปี 2543
+                                </label>
+                                <br>
+                                <img id="cm_landuse_2543Legend">
+                            </div>
+                        </div>
+
+
+                        <div class="group-check">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cm_landuse_2538"
+                                    id="lyr_cm_landuse_2538">
+                                <label class="form-check-label">
+                                    การใช้ประโยชน์ที่ดินปี 2538
+                                </label>
+                                <br>
+                                <img id="cm_landuse_2538Legend">
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <label for=""><b>แผนที่ฐาน</b></label>
+                    <div class="scroll-base">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="basemap" value="mapbox" checked>
+                            <label class="form-check-label" for="">
+                                แผนที่ถนน Mapbox
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="basemap" value="grod">
+                            <label class="form-check-label" for="">
+                                แผนที่ถนน Google Maps
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="basemap" value="ghyb">
+                            <label class="form-check-label" for="">
+                                แผนที่ผสม Google Maps
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="basemap" value="gter">
+                            <label class="form-check-label" for="">
+                                แผนที่ภูมิประเทศ Google Maps
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="container text-center text-lg-start  text-muted">
+        <hr>
+        <div class="text-center p-4">
+            © 2023 Copyright:
+            โครงการศึกษาประวัติศาสตร์สังคมวัฒนธรรมทางเศรษฐกิจชุมชนและการพัฒนาโปรแกรมประยุกต์ระบบภูมิสารสนเทศทรัพยากรชุมชน
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

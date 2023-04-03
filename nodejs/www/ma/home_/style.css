@@ -21,11 +21,6 @@ h5 {
 
 .scroll {
     scroll-behavior: smooth;
-    height: 400px;
+    height: 440px;
     overflow-y: scroll;
-}
-
-.dataTables_filter,
-.dataTables_info {
-    display: none;
 }
