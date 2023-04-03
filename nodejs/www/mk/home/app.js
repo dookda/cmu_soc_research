@@ -318,20 +318,35 @@ let lyr = {
 }
 
 // set default layer
-cm_province.addTo(map);
-$("#lyr_prov").prop("checked", true);
+// cm_province.addTo(map);
+// $("#lyr_prov").prop("checked", true);
 
-cm_amphoe.addTo(map);
-$("#lyr_amp").prop("checked", true);
+// cm_amphoe.addTo(map);
+// $("#lyr_amp").prop("checked", true);
 
-cm_road.addTo(map);
-$("#lyr_cm_road").prop("checked", true);
+// cm_road.addTo(map);
+// $("#lyr_cm_road").prop("checked", true);
 
-village_bound.addTo(map);
-$("#lyr_village_bound").prop("checked", true);
+// village_bound.addTo(map);
+// $("#lyr_village_bound").prop("checked", true);
 
-cm_village.addTo(map);
-$("#lyr_cm_village").prop("checked", true);
+// cm_village.addTo(map);
+// $("#lyr_cm_village").prop("checked", true);
+
+mk_pipe.addTo(map);
+$("#lyr_mk_pipe").prop("checked", true);
+
+mk_plot_MK.addTo(map);
+$("#lyr_mk_plot_MK").prop("checked", true);
+
+mk_pour_point.addTo(map);
+$("#lyr_mk_pour_point").prop("checked", true);
+
+mk_road.addTo(map);
+$("#lyr_mk_road").prop("checked", true);
+
+mk_servicearea.addTo(map);
+$("#lyr_mk_servicearea").prop("checked", true);
 
 $("input[type=checkbox]").change(async () => {
     await map.eachLayer(i => {
