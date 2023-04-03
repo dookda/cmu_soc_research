@@ -544,10 +544,19 @@ map.on("click", async (e) => {
 
     axios.get(lyrInfoUrl).then(res => {
         if (res.data.features.length > 0) {
-            var txt;
+            var txt = "";
+            var malyr = [...irr, ...trv];
+
             res.data.features.forEach(i => {
-                console.log(i);
-                txt += `${i.id}:  ${i.properties.tb}<br>`;
+                let layer = i.id.split(".")
+                let title
+
+                malyr.forEach(j => {
+                    if (j.layer_txt == layer[0]) {
+                        title = j.name
+                    }
+                })
+                txt += `<b>${title}</b>  ${i.properties.tb}<br>`;
             });
 
             L.popup()
