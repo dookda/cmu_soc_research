@@ -5,17 +5,21 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <NamedLayer>
-    <Name>_trail</Name>
+    <Name>ma_boundary</Name>
     <UserStyle>
-      <Title>A dark yellow line style</Title>
+      <Title>A gold polygon style</Title>
       <FeatureTypeStyle>
         <Rule>
-          <Title>dark yellow line</Title>
-          <LineSymbolizer>
+          <Title>gold polygon</Title>
+          <PolygonSymbolizer>
+            
             <Stroke>
-              <CssParameter name="stroke">#f96d6d</CssParameter>
+              <CssParameter name="stroke">#da6969</CssParameter>
+              <CssParameter name="stroke-width">5</CssParameter>
+              <CssParameter name="stroke-linecap">round</CssParameter>
             </Stroke>
-          </LineSymbolizer>
+          </PolygonSymbolizer>
+
         </Rule>
 
       </FeatureTypeStyle>
