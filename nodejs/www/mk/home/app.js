@@ -1,7 +1,7 @@
 let map = L.map('map', {
     // center: [18.80, 98.60],
     center: [18.87299114104469, 98.82399559020998],
-    zoom: 13,
+    zoom: 14,
     scrollWheelZoom: true
 });
 
