@@ -436,7 +436,7 @@ let getLayer = () => {
 const listLayers = (layerOpt, div, layerGroup) => {
     document.getElementById("layerGroup").innerHTML = layerGroup;
     document.getElementById("lyrs").innerHTML = "";
-    $("#lyr_prov").prop("checked", true);
+    // $("#lyr_prov").prop("checked", true);
     let lyrArr = [];
     layerOpt.map(i => {
         let chk = `<input type="checkbox" id="${i.layer_txt}" name="${i.layer_txt}" value="${i.layer_txt}">`;
@@ -567,6 +567,15 @@ map.on("click", async (e) => {
     }).catch(err => { })
 });
 
+let clearMap = async () => {
+    console.log("clear");
+    await map.eachLayer(i => {
+        if (i.options.name == "query") {
+            map.removeLayer(i)
+        }
+    })
+}
+
 let zoomMap = async (geomTxt) => {
     await map.eachLayer(i => {
         if (i.options.name == "query") {
@@ -608,7 +617,8 @@ const searchWfs = async () => {
                 data: null,
                 render: function (data, type, row, meta) {
                     let mBtn = `<button class= "btn btn-success" onclick='zoomMap(${JSON.stringify(row.geom)})'><i class="fas fa-map-marker-alt"></i>&nbsp;ซูมไปยังตำแหน่งนี้</button>`
-                    return `${mBtn}`
+                    let cBtn = `<button class= "btn btn-warning" onclick='clearMap()'><i class="fas fa-map-marker-alt"></i>&nbsp;ไม่แสดงบนแผนที่</button>`;
+                    return `${mBtn} ${cBtn}`
                 },
             }
         ],

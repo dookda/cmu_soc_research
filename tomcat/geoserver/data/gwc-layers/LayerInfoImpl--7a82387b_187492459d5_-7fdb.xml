@@ -1,34 +1,18 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl--2c209d60:186ed3adeaa:-7fdb</id>
+  <id>LayerInfoImpl--7a82387b:187492459d5:-7fdb</id>
   <enabled>true</enabled>
   <inMemoryCached>true</inMemoryCached>
-  <name>cm:mk_artesian_well</name>
+  <name>cm:mk_plot</name>
   <mimeFormats>
-    <string>image/png</string>
     <string>image/jpeg</string>
+    <string>image/png</string>
   </mimeFormats>
   <gridSubsets>
     <gridSubset>
       <gridSetName>EPSG:4326</gridSetName>
-      <extent>
-        <coords>
-          <double>98.81997680664062</double>
-          <double>18.858999252319336</double>
-          <double>98.8320083618164</double>
-          <double>18.868064880371094</double>
-        </coords>
-      </extent>
     </gridSubset>
     <gridSubset>
       <gridSetName>EPSG:900913</gridSetName>
-      <extent>
-        <coords>
-          <double>1.1000589498318339E7</double>
-          <double>2138342.3745242273</double>
-          <double>1.1001928844913958E7</double>
-          <double>2139408.8337228196</double>
-        </coords>
-      </extent>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>
@@ -42,7 +26,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>_well</defaultStyle>
+      <defaultStyle>plot_greenhouse</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>
