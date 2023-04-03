@@ -46,6 +46,7 @@ var cm_province = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_amphoe = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -53,6 +54,7 @@ var cm_amphoe = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_tambon = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -60,6 +62,7 @@ var cm_tambon = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 let base = {

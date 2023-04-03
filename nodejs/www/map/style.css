@@ -24,3 +24,8 @@ h5 {
     height: 400px;
     overflow-y: scroll;
 }
+
+.dataTables_filter,
+.dataTables_info {
+    display: none;
+}

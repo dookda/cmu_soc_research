@@ -35,6 +35,16 @@ app.post("/api/survey_insert", async (req, res) => {
     res.status(200).json({
         data: "success"
     })
-})
+});
+
+app.post("/api/get_feature", async (req, res) => {
+    const { layer, text } = req.body;
+    let sql = `SELECT tb, ST_ASGeoJSON(geom) as geom FROM ${layer} WHERE tb ILIKE '%${text}%'`;
+    db.query(sql).then(r => {
+        res.status(200).json({
+            data: r.rows
+        })
+    })
+});
 
 module.exports = app;

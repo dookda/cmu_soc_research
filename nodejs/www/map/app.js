@@ -1,10 +1,10 @@
 
-const searchParams = new URLSearchParams(window.location.search);
-const id = searchParams.get('id');
+// const searchParams = new URLSearchParams(window.location.search);
+// const id = searchParams.get('id');
 
-const layers = id.split(',');
+// const layers = id.split(',');
 
-console.log(layers);
+// console.log(layers);
 
 
 let map = L.map('map', {
@@ -56,6 +56,7 @@ var cm_province = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_amphoe = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -63,6 +64,7 @@ var cm_amphoe = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_tambon = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -70,6 +72,7 @@ var cm_tambon = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_forest_type = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -77,6 +80,7 @@ var cm_forest_type = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -85,6 +89,7 @@ var cm_forest_use = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -93,6 +98,7 @@ var cm_agriculture_zoning = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -101,6 +107,7 @@ var cm_geology = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -110,6 +117,7 @@ var cm_soil = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -118,6 +126,7 @@ var cm_landuse_2543 = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -126,6 +135,7 @@ var cm_landuse_2538 = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -134,6 +144,7 @@ var cm_fault = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_contour = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -141,6 +152,7 @@ var cm_contour = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_waterbody = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -148,6 +160,7 @@ var cm_waterbody = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var village_bound = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -155,6 +168,7 @@ var village_bound = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var planuse = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -162,6 +176,7 @@ var planuse = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_river = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -169,6 +184,7 @@ var cm_river = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -176,6 +192,7 @@ var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -183,6 +200,7 @@ var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_pipe = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -191,6 +209,7 @@ var mk_pipe = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_plot_MK = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -199,6 +218,7 @@ var mk_plot_MK = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
     zIndex: 2
 });
 
@@ -208,6 +228,7 @@ var mk_pour_point = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
     zIndex: 2
 });
 
@@ -217,6 +238,7 @@ var mk_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -225,6 +247,7 @@ var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_travel = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -233,6 +256,7 @@ var mk_travel = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_stream = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -241,6 +265,7 @@ var mk_stream = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
     zIndex: 2
 });
 
@@ -251,6 +276,7 @@ var ma_boundary = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
 });
 
 var ma_irrigation_line = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -259,6 +285,7 @@ var ma_irrigation_line = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
     zIndex: 2
 });
 
@@ -269,6 +296,7 @@ var ma_plot_greenhouse = L.tileLayer.wms("/geoserver/cm/wms?", {
     opacity: 0.6,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
     zIndex: 2
 });
 
@@ -278,6 +306,7 @@ var ma_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
     zIndex: 1
 });
 
@@ -287,6 +316,7 @@ var ma_tank_point = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
     zIndex: 2
 });
 
@@ -296,6 +326,7 @@ var ma_trail = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
     zIndex: 2
 });
 
@@ -305,6 +336,7 @@ var ma_tree = L.tileLayer.wms("/geoserver/cm/wms?", {
     transparent: true,
     maxZoom: 21,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_village = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -312,6 +344,7 @@ var cm_village = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     // CQL_FILTER: 'pro_code=53'
 });
 
@@ -390,6 +423,16 @@ const trv = [{
     legend: legUrl + "cm:ma_boundary"
 }]
 
+let wmsLyr = [];
+let getLayer = () => {
+    wmsLyr = [];
+    map.eachLayer(i => {
+        if (i.options.iswms) {
+            wmsLyr.push(i.options.layers);
+        }
+    })
+}
+
 const listLayers = (layerOpt, div, layerGroup) => {
     document.getElementById("layerGroup").innerHTML = layerGroup;
     document.getElementById("lyrs").innerHTML = "";
@@ -442,6 +485,8 @@ const changeOverlay = async (lyrArr) => {
         })
     })
 
+    getLayer();
+
     $("input[type=checkbox]").change(async () => {
         await map.eachLayer(i => {
             if (i.options.name == "lyr") {
@@ -461,11 +506,11 @@ const changeOverlay = async (lyrArr) => {
                 }
             })
         })
+        getLayer();
     })
 }
 
 listLayers(irr, "ghyb", "ระบบชลประทาน");
-// ma_boundary.addTo(map)
 
 $("#btn-irr").click(() => {
     listLayers(irr, "ghyb", "ระบบชลประทาน");
@@ -475,6 +520,89 @@ $("#btn-trv").click(() => {
     listLayers(trv, "gter", "เส้นทางศึกษาธรรมชาติ");
 })
 
-map.on("click", (e) => {
-    console.log(e);
-})
+map.on("click", async (e) => {
+    var pnt = await map.latLngToContainerPoint(e.latlng, map.getZoom());
+    var size = await map.getSize();
+    var bbox = await map.getBounds().toBBoxString();
+    $("#showlat").text(e.latlng.lat)
+    $("#showlng").text(e.latlng.lng)
+
+    let lyrInfoUrl = "/geoserver/wms?SERVICE=WMS" +
+        "&VERSION=1.1.1&REQUEST=GetFeatureInfo" +
+        "&QUERY_LAYERS=" + wmsLyr +
+        "&LAYERS=" + wmsLyr +
+        "&Feature_count=" + wmsLyr.length +
+        "&INFO_FORMAT=application/json" +
+        "&X=" + Math.round(pnt.x) +
+        "&Y=" + Math.round(pnt.y) +
+        "&SRS=EPSG:4326" +
+        "&WIDTH=" + size.x +
+        "&HEIGHT=" + size.y +
+        "&BBOX=" + bbox
+
+    // console.log(lyrInfoUrl);
+
+    axios.get(lyrInfoUrl).then(res => {
+        if (res.data.features.length > 0) {
+            var txt;
+            res.data.features.forEach(i => {
+                console.log(i);
+                txt += `${i.id}:  ${i.properties.tb}<br>`;
+            });
+
+            L.popup()
+                .setLatLng(e.latlng)
+                .setContent(txt)
+                .openOn(map);
+        }
+    }).catch(err => { })
+});
+
+let zoomMap = async (geomTxt) => {
+    await map.eachLayer(i => {
+        if (i.options.name == "query") {
+            map.removeLayer(i)
+        }
+    })
+
+    let geom = JSON.parse(geomTxt);
+    // console.log(geom);
+
+    if (geom.type == "Point") {
+        L.circleMarker([geom.coordinates[1], geom.coordinates[0]], { radius: 8, name: 'query' }).addTo(map);
+        map.setView([geom.coordinates[1], geom.coordinates[0]], 18);
+    } else {
+        // console.log(geom.coordinates[0][0]);
+        let g = L.geoJSON(geom, { name: 'query' }).addTo(map);
+        map.fitBounds(g.getBounds());
+    }
+}
+
+var table = $('#table').DataTable();
+
+const searchWfs = async () => {
+    let text = $("#search").val();
+    let layer = $("#select_layer").val();
+
+    // $('#table').DataTable().de;
+    $('#table').dataTable().fnDestroy();
+
+    table = $('#table').DataTable({
+        ajax: {
+            type: "POST",
+            url: `/api/get_feature`,
+            data: { text, layer },
+            dataSrc: 'data',
+        },
+        columns: [
+            { data: 'tb' }, {
+                data: null,
+                render: function (data, type, row, meta) {
+                    let mBtn = `<button class= "btn btn-success" onclick='zoomMap(${JSON.stringify(row.geom)})'><i class="fas fa-map-marker-alt"></i>&nbsp;ซูมไปยังตำแหน่งนี้</button>`
+                    return `${mBtn}`
+                },
+            }
+        ],
+        searching: false,
+    });
+}

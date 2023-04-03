@@ -47,6 +47,7 @@ var cm_province = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_amphoe = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -54,6 +55,7 @@ var cm_amphoe = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_tambon = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -61,6 +63,7 @@ var cm_tambon = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_forest_type = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -68,6 +71,7 @@ var cm_forest_type = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -76,6 +80,7 @@ var cm_forest_use = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -84,6 +89,7 @@ var cm_agriculture_zoning = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -92,6 +98,7 @@ var cm_geology = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -101,6 +108,7 @@ var cm_soil = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -109,6 +117,7 @@ var cm_landuse_2543 = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -117,6 +126,7 @@ var cm_landuse_2538 = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     zIndex: 0
 });
 
@@ -125,6 +135,7 @@ var cm_fault = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_contour = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -132,6 +143,7 @@ var cm_contour = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_waterbody = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -139,6 +151,7 @@ var cm_waterbody = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var village_bound = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -146,6 +159,7 @@ var village_bound = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var planuse = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -153,6 +167,7 @@ var planuse = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_river = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -160,6 +175,7 @@ var cm_river = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -167,6 +183,7 @@ var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -174,6 +191,7 @@ var cm_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_pipe = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -181,6 +199,7 @@ var mk_pipe = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_plot_MK = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -188,6 +207,7 @@ var mk_plot_MK = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_pour_point = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -195,6 +215,7 @@ var mk_pour_point = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_road = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -202,6 +223,7 @@ var mk_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -209,6 +231,7 @@ var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_travel = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -216,6 +239,7 @@ var mk_travel = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_stream = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -223,6 +247,7 @@ var mk_stream = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
@@ -230,6 +255,7 @@ var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
 });
 
 
@@ -238,6 +264,7 @@ var cm_village = L.tileLayer.wms("/geoserver/cm/wms?", {
     format: 'image/png',
     transparent: true,
     name: "lyr",
+    iswms: true,
     // CQL_FILTER: 'pro_code=53'
 });
 
