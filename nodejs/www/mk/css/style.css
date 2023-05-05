@@ -6,7 +6,7 @@
 
 /* header */
 .container {
-    max-width: 960px;
+    max-width: 720px;
     width: 100%;
     margin: 0 auto;
 }
@@ -76,6 +76,7 @@ ul.menu li a:hover {
     font-size: 24px;
     font-weight: bold;
     background-color: #00B2FF;
+    padding: 2%;
 }
 
 .content-heading {

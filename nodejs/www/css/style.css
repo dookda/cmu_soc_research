@@ -36,13 +36,15 @@ h5 {
 }
 
 .container {
-    width: 960px;
+    width: 720px;
     height: auto;
 }
 .container-grid {
+    background-color: rgb(210, 248, 255);
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .container-grid-item img {
     width: 100%;
+    padding: 15%;
 }
