@@ -1,0 +1,17 @@
+<layer>
+  <name>mk_boundary</name>
+  <id>LayerInfoImpl--72c4bc82:188009e38f3:-7ffc</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--72c4bc82:188009e38f3:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--72c4bc82:188009e38f3:-7ffd</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-05-09 14:43:42.216 UTC</dateCreated>
+  <dateModified>2023-05-09 15:43:50.859 UTC</dateModified>
+</layer>

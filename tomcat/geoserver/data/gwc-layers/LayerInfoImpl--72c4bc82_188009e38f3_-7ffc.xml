@@ -1,8 +1,8 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl--2c209d60:186ed3adeaa:-7fd9</id>
+  <id>LayerInfoImpl--72c4bc82:188009e38f3:-7ffc</id>
   <enabled>true</enabled>
   <inMemoryCached>true</inMemoryCached>
-  <name>cm:mk_pour_point</name>
+  <name>cm:mk_boundary</name>
   <mimeFormats>
     <string>image/png</string>
     <string>image/jpeg</string>
@@ -12,10 +12,10 @@
       <gridSetName>EPSG:4326</gridSetName>
       <extent>
         <coords>
-          <double>98.81903076171875</double>
-          <double>18.852802276611328</double>
-          <double>98.84032440185547</double>
-          <double>18.864852905273438</double>
+          <double>98.8133316040039</double>
+          <double>18.84905433654785</double>
+          <double>98.8453369140625</double>
+          <double>18.88604736328125</double>
         </coords>
       </extent>
     </gridSubset>
@@ -23,10 +23,10 @@
       <gridSetName>EPSG:900913</gridSetName>
       <extent>
         <coords>
-          <double>1.1000484185079368E7</double>
-          <double>2137613.4100189195</double>
-          <double>1.1002854582256522E7</double>
-          <double>2139030.977918939</double>
+          <double>1.0999849757744601E7</double>
+          <double>2137172.5442743944</double>
+          <double>1.1003412572563004E7</double>
+          <double>2141524.4214725234</double>
         </coords>
       </extent>
     </gridSubset>
@@ -42,7 +42,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>_mk_pour_point</defaultStyle>
+      <defaultStyle>_mk_bound</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>

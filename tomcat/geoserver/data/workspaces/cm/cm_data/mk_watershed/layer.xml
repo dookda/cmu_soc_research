@@ -1,0 +1,17 @@
+<layer>
+  <name>mk_watershed</name>
+  <id>LayerInfoImpl--72c4bc82:188009e38f3:-7ffe</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--72c4bc82:188009e38f3:-7ff2</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--72c4bc82:188009e38f3:-7fff</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-05-09 14:43:11.853 UTC</dateCreated>
+  <dateModified>2023-05-09 14:52:56.502 UTC</dateModified>
+</layer>

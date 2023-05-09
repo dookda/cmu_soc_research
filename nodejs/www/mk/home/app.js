@@ -1,7 +1,7 @@
 
 let map = L.map('map', {
     // center: [18.80, 98.60],
-    center: [18.87299114104469, 98.82399559020998],
+    center: [18.86099114104469, 98.82399559020998],
     zoom: 14,
     scrollWheelZoom: true
 });
@@ -239,8 +239,26 @@ var mk_road = L.tileLayer.wms("/geoserver/cm/wms?", {
     iswms: true,
 });
 
+var mk_boundary = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_boundary',
+    format: 'image/png',
+    transparent: true,
+    maxZoom: 21,
+    name: "lyr",
+    iswms: true,
+});
+
 var mk_servicearea = L.tileLayer.wms("/geoserver/cm/wms?", {
     layers: 'cm:mk_servicearea',
+    format: 'image/png',
+    transparent: true,
+    maxZoom: 21,
+    name: "lyr",
+    iswms: true,
+});
+
+var mk_watershed = L.tileLayer.wms("/geoserver/cm/wms?", {
+    layers: 'cm:mk_watershed',
     format: 'image/png',
     transparent: true,
     maxZoom: 21,
@@ -392,6 +410,16 @@ const irr = [{
     layer_txt: "mk_servicearea",
     layer_var: mk_servicearea,
     legend: legUrl + "cm:mk_servicearea"
+}, {
+    name: "ลุ่มน้ำ",
+    layer_txt: "mk_watershed",
+    layer_var: mk_watershed,
+    legend: legUrl + "cm:mk_watershed"
+}, {
+    name: "ขอบเขตหมู่บ้าน",
+    layer_txt: "mk_boundary",
+    layer_var: mk_boundary,
+    legend: legUrl + "cm:mk_boundary"
 }]
 
 const trv = [{
@@ -414,6 +442,16 @@ const trv = [{
     layer_txt: "mk_servicearea",
     layer_var: mk_servicearea,
     legend: legUrl + "cm:mk_servicearea"
+}, {
+    name: "ลุ่มน้ำ",
+    layer_txt: "mk_watershed",
+    layer_var: mk_watershed,
+    legend: legUrl + "cm:mk_watershed"
+}, {
+    name: "ขอบเขตหมู่บ้าน",
+    layer_txt: "mk_boundary",
+    layer_var: mk_boundary,
+    legend: legUrl + "cm:mk_boundary"
 }]
 
 let wmsLyr = [];
