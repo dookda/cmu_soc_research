@@ -1,14 +1,14 @@
 <featureType>
-  <id>FeatureTypeInfoImpl--2c209d60:186ed3adeaa:-7fd8</id>
-  <name>mk_plot_MK</name>
-  <nativeName>mk_plot_MK</nativeName>
+  <id>FeatureTypeInfoImpl--72c4bc82:188009e38f3:-7ffd</id>
+  <name>mk_boundary</name>
+  <nativeName>mk_boundary</nativeName>
   <namespace>
     <id>NamespaceInfoImpl--127b0c12:180ff63c719:-7ffd</id>
   </namespace>
-  <title>mk_plot_MK</title>
+  <title>mk_boundary</title>
   <keywords>
     <string>features</string>
-    <string>mk_plot_MK</string>
+    <string>mk_boundary</string>
   </keywords>
   <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
   DATUM[&quot;World Geodetic System 1984&quot;, 
@@ -21,17 +21,17 @@
   AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
   <srs>EPSG:4326</srs>
   <nativeBoundingBox>
-    <minx>98.81761932373047</minx>
-    <maxx>98.83638763427734</maxx>
-    <miny>18.853479385375977</miny>
-    <maxy>18.870561599731445</maxy>
+    <minx>98.8133316040039</minx>
+    <maxx>98.8453369140625</maxx>
+    <miny>18.84905433654785</miny>
+    <maxy>18.88604736328125</maxy>
     <crs>EPSG:4326</crs>
   </nativeBoundingBox>
   <latLonBoundingBox>
-    <minx>98.81761932373047</minx>
-    <maxx>98.83638763427734</maxx>
-    <miny>18.853479385375977</miny>
-    <maxy>18.870561599731445</maxy>
+    <minx>98.8133316040039</minx>
+    <maxx>98.8453369140625</maxx>
+    <miny>18.84905433654785</miny>
+    <maxy>18.88604736328125</maxy>
     <crs>EPSG:4326</crs>
   </latLonBoundingBox>
   <projectionPolicy>FORCE_DECLARED</projectionPolicy>

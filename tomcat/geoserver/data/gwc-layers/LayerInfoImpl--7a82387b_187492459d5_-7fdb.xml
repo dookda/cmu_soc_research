@@ -4,15 +4,31 @@
   <inMemoryCached>true</inMemoryCached>
   <name>cm:mk_plot</name>
   <mimeFormats>
-    <string>image/jpeg</string>
     <string>image/png</string>
+    <string>image/jpeg</string>
   </mimeFormats>
   <gridSubsets>
     <gridSubset>
       <gridSetName>EPSG:4326</gridSetName>
+      <extent>
+        <coords>
+          <double>98.81761932373047</double>
+          <double>18.853479385375977</double>
+          <double>98.83638763427734</double>
+          <double>18.870561599731445</double>
+        </coords>
+      </extent>
     </gridSubset>
     <gridSubset>
       <gridSetName>EPSG:900913</gridSetName>
+      <extent>
+        <coords>
+          <double>1.1000327064521225E7</double>
+          <double>2137693.0585699864</double>
+          <double>1.1002416343294354E7</double>
+          <double>2139702.55205312</double>
+        </coords>
+      </extent>
     </gridSubset>
   </gridSubsets>
   <metaWidthHeight>
@@ -26,7 +42,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>plot_greenhouse</defaultStyle>
+      <defaultStyle>_mk_plot2</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>
