@@ -184,6 +184,13 @@ ul.menu li a:hover {
     color: blue;
 }
 
+.ebook {
+    justify-items: center;
+    background-color: #d262fb;
+    width: 760;
+    height: auto;
+}
+
 @media only screen and (max-width: 480px) {
     header {
         height: auto;
