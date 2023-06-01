@@ -2,9 +2,9 @@ version: "3.3"
 services:
   nginx:
     image: nginx
-    depends_on:
-      - nodejs
-      - tomcat
+    # depends_on:
+    #   - nodejs
+    #   - tomcat
     ports:
       - 80:80
     volumes:
