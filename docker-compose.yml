@@ -6,7 +6,7 @@ services:
       - nodejs
       - tomcat
     ports:
-      - "80:80"
+      - 80:80
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
 
@@ -22,7 +22,7 @@ services:
     volumes:
       - ./nodejs:/home/node/app
     ports:
-      - '3000:3000'
+      - 3000:3000
     command: bash -c "npm i && npm i -g nodemon && nodemon server.js"
 
   postgres:
@@ -33,7 +33,7 @@ services:
       - POSTGRES_PASSWORD=1234
       # - POSTGRES_DB=cmu_commu
     ports:
-      - "5434:5432"
+      - 5434:5432
     volumes:
       - ./postgres/cmu_commu.sql:/docker-entrypoint-initdb.d/cmu_commu.sql
 
@@ -45,4 +45,4 @@ services:
       - ./tomcat/:/usr/local/tomcat/webapps/
       - ./tomcat/fonts/truetype/:/usr/share/fonts/truetype/
     ports:
-      - '8080:8080'
+      - 8080:8080
